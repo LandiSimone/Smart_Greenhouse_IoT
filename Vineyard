@@ -1,0 +1,20 @@
+Sensori: 
+  - temperatura aria 
+  - umidità suolo 
+  - luce esterno
+
+Attuatori:
+  - irrigazione
+  - aerazione
+  - luci
+
+Led: (quando attuatore risolve il led lampeggia)
+  - tutto ok  -> verde 
+  - temperatura alta -> rosso
+  - umidità bassa -> blu 
+  - luce bassa -> giallo
+
+Dashboard:
+  - parametri sensori
+  - storico mesile acqua utilizzata 
+ 

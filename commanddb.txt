@@ -1,0 +1,22 @@
+CREATE DATABASE smartgreenhouse;
+
+CREATE TABLE smartgreenhouse.temperature (
+	sampleid int auto_increment primary key,
+	sample float not null,
+	unit varchar(45) not null,
+	machineid varchar(45) not null,
+	timestamp datetime default CURRENT_TIMESTAMP null);
+
+CREATE TABLE smartgreenhouse.light (
+	sampleid int auto_increment primary key,
+	sample float not null,
+	unit varchar(45) not null,
+	machineid varchar(45) not null,
+	timestamp datetime default CURRENT_TIMESTAMP null);
+
+CREATE TABLE smartgreenhouse.humidity (
+	sampleid int auto_increment primary key,
+	sample float not null,
+	unit varchar(45) not null,
+	machineid varchar(45) not null,
+	timestamp datetime default CURRENT_TIMESTAMP null);

@@ -1,0 +1,91 @@
+COLLECTOR
+collector.java
+coapCollector.java
+coapcollectorserver.java
+coapregistration.java
+sensor.java
+message.java
+nodestate.java
+utils.java
+mqqtcollector.java
+mysqldriver.java
+mysqlmanager.java
+config.properties
+collector.iml
+pom.xml
+
+
+NODES-->COAP-NODE
+Makefile
+project-conf.h
+res-temperature.c
+res-temperature.h
+res-humidity.c
+res-humidity.h
+res-light.c
+res-light.h
+res-alert.c
+res-alert.h
+coap-sensor.c
+
+NODES-->MQTT-NODE
+makefile
+mqtt-sensor.h
+project-conf.h
+mqtt-sensor.c
+
+NODES-->SENSORS
+temperature.c
+temperature.h
+util.h
+util.c
+humidity.c
+humidity.h
+light.c
+light.h
+
+RPL-BORDER-ROUTER
+border-router.c
+Makefile
+project.conf.h
+RPL-BORDER-ROUTER --> SKY
+module-macros.h
+RPL-BORDER-ROUTER --> WEBSERVER
+httpd-simple.c
+httpd-simple.h
+webserver.c
+--------------------------------------------------------------------------------------------------------------------------
+
+DA VEDERE
+-file mqttcollector.java
+	\u001B[97m che colore è?
+	public void connectionLost(Throwable cause)
+	public void deliveryComplete(IMqttDeliveryToken token)
+-NODESTATE.java --> VENGONO USATI?
+-collector.iml--> si autogenera?
+-fuel-level.c--> perchè 2 timer?
+-mqtt-sensor.c --> case MQTT_EVENT_SUBACK: perchè if commentato?
+-------------------------------------------------------------------------------------------------------------
+
+jacopo
+errore temperatura --> 	blu OFF, 	rosso ON, 	fanno partire temperatura e energia (così la temperatura torna normale)
+no errore --> 		blu ON, 	rosso OFF, 	interrompono temperatura e energia
+errore carburante --> 	LED2 ON
+se preme bottone --> 	LED2 OFF, 			interrompono il refill 
+
+noi
+errore temperatura -->	rosso ON, 	verde OFF,	facciamo partire temperatura
+errore umidità -->	blu ON,	verde OFF,	facciamo partire umidità
+errore luce -->		giallo ON,	verde	OFF
+no errore -->		
+
+Led: (quando attuatore risolve il led lampeggia)
+  - temperatura alta -> rosso
+  - umidità bassa -> blu 
+  - luce bassa -> giallo
+- inizio --> BLU
+- iscrive --> VERDE
+
+iotrootiot
+
+

@@ -1,0 +1,30 @@
+db
+0) mysql : sudo mysql -u root -pPASSWORD 
+1) creare DB : CREATE DATABASE smartgreenhouse;
+2) seleziona DB :  USE smartgreenhouse;
+3) importa dumb : SOURCE smartgreenhouse_dump.sql;
+
+Mosquitto
+1) visualizza processi in corso : ps -ef | grep mosquitto
+2) killa : sudo kill 12345
+1) check status: systemctl status mosquitto 
+
+Collector:
+nella cartella collector 
+1) mvn clean install
+2) mvn package
+3) java -jar target/collector-1.0-SNAPSHOT.jar
+
+Simultazione Contiki:
+1) contikier 
+2) cd tools/cooja
+3) ant run 
+
+Border router:
+1) tool -> serial socket server
+2) cd border router folder
+3) make TARGET=cooja connect-router-cooja
+
+Grafana:
+1) check status : sudo systemctl status grafana-server
+2) dashboard : localhost:3000
